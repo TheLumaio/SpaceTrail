@@ -15,7 +15,7 @@ private:
 	sf::Font font;
 	sf::Text text;
 
-	float x, y, w;
+	float w;
 	int c1, c2, c3;
 
 public:

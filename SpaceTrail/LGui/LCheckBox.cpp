@@ -2,10 +2,12 @@
 
 LCheckBox::LCheckBox(std::string t, float x, float y, bool checked, float w) :
 	checked(checked),
-	x(x),
-	y(y),
 	w(w)
 {
+	this->_text = t;
+	this->x = x;
+	this->y = y;
+
 	// 14x14
 
 	font.loadFromFile("data/fonts/proggy.ttf");

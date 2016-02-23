@@ -11,6 +11,8 @@ MenuState::MenuState(Engine* e) :
 
 MenuState::~MenuState()
 {
+	delete gui;
+	gui = nullptr;
 }
 
 
@@ -23,11 +25,13 @@ void MenuState::init(EventMap& emap)
 	start->connect([&]() { m_engine->setState(new PlayState(m_engine)); });
 	quit->connect([&]() { m_engine->quit(); });
 
+	LLabel* title = new LLabel("Space Trail", 1280 / 2 - 300 / 2, 50, A_CENTER, 16 * 2, 300);
+
 	gui = new LGUI();
 	gui->addWidget(start);
 	gui->addWidget(options);
 	gui->addWidget(quit);
-	gui->addWidget(new LLabel("Space Trail", 1280/2-300/2, 50, A_CENTER, 16*2, 300));
+	gui->addWidget(title);
 
 	// demo
 
@@ -49,6 +53,7 @@ void MenuState::leave()
 
 void MenuState::update(float dt, sf::Event& event)
 {
+
 	gui->handleEvents(m_engine->getEventMap());
 	gui->update();
 }

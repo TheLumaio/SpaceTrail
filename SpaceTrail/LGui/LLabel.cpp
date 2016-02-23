@@ -1,12 +1,13 @@
 #include "LLabel.h"
 
 LLabel::LLabel(std::string text, float x, float y, ALIGN align, int c, float w, std::string f) :
-	text(text),
-	x(x),
-	y(y),
 	align(align),
 	w(w)
 {
+	this->_text = text;
+	this->x = x;
+	this->y = y;
+
 	font.loadFromFile(f);
 	drawtext.setFont(font);
 	drawtext.setString(text);
@@ -105,6 +106,6 @@ void LLabel::render(sf::RenderWindow* context)
 
 void LLabel::setText(std::string text)
 {
-	this->text = text;
+	this->_text = text;
 	drawtext.setString(text);
 }

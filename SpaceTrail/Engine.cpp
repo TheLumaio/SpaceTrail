@@ -5,6 +5,7 @@ Engine::Engine(int width, int height, std::string title) :
 	m_height(height)
 {
 	m_window = new sf::RenderWindow(sf::VideoMode(width, height), title, sf::Style::Close);
+	m_window->setFramerateLimit(60);
 
 	m_emap["close"] = thor::Action(sf::Event::Closed); // default clost event;
 	// other default events

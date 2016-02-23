@@ -12,8 +12,7 @@ class LLabel :
 	public LWidget
 {
 private:
-	std::string text;
-	float x, y, w;
+	float w;
 
 	sf::Font font;
 	sf::Text drawtext;

@@ -6,7 +6,7 @@ class LCheckBox :
 {
 private:
 	bool checked;
-	float x, y, w;
+	float w;
 
 	sf::Font font;
 	sf::Text text;

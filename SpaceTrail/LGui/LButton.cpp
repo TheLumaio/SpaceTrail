@@ -2,13 +2,15 @@
 
 
 LButton::LButton(std::string t, float x, float y, float w, int c, std::string f) :
-	x(x),
-	y(y),
 	w(w),
 	c1(c),
 	c2(c * 2),
 	c3(c + c/2)
 {
+	this->x = x;
+	this->y = y;
+	this->_text = t;
+
 	callback = [&]() {}; // default callback. does nothing.
 
 	font.loadFromFile(f);

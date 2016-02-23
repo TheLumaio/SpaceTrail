@@ -5,6 +5,9 @@
 
 class LWidget
 {
+protected:
+	float x, y, z;
+	std::string _text;
 public:
 	LWidget();
 	~LWidget();
@@ -12,5 +15,8 @@ public:
 	virtual void handleEvents(thor::ActionMap<std::string>&);
 	virtual void update();
 	virtual void render(sf::RenderWindow*);
+
+	virtual void setText(std::string);
+	virtual void setPosition(float, float) final;
 
 };

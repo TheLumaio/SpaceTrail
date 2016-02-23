@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include "Injury.h"
+#include "NameGenerator.h"
 
 struct Crew
 {
@@ -21,6 +22,12 @@ struct Crew
 			hunger    -= i->hunger;
 			thirst    -= i->thirst;
 		}
+	}
+
+	Crew()
+	{
+		name_first = NameGen::NameGen();
+		name_last = NameGen::NameGen();
 	}
 
 };
