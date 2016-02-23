@@ -8,19 +8,19 @@ namespace NameGen
 {
 
 	std::vector<std::string> NamePrefix = {
-		"", "bel", "nar", "xan",
-		"bell", "natr", "ev"
-	};
-
-	std::vector<std::string> NameStems = {
+		"bel", "nar", "xan",
+		"bell", "natr", "ev",
 		"adur", "aes", "anim", "apoll", "imac",
 		"educ", "equis", "extr", "guius", "hann",
 		"equi", "amora", "hum", "iace", "ille",
 		"inept", "iuv", "obe", "ocul", "orbis"
 	};
 
+	std::vector<std::string> NameStems = {
+	};
+
 	std::vector<std::string> NameSuffix = {
-		"", "us", "ix", "ox", "ith",
+		"us", "ix", "ox", "ith",
 		"ath", "um", "ator", "or", "axia",
 		"imus", "ais", "itur", "orex", "o"
 		"y"
@@ -31,8 +31,8 @@ namespace NameGen
 		std::ostringstream ss;
 		std::string PlayerName;
 		
-		//ss << NamePrefix[(rand() % NamePrefix.size())];
-		ss << NameStems[(rand() % NameStems.size())];
+		ss << NamePrefix[(rand() % NamePrefix.size())];
+		//ss << NameStems[(rand() % NameStems.size())];
 		ss << NameSuffix[(rand() % NameSuffix.size())];
 
 		PlayerName = ss.str();

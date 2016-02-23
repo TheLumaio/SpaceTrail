@@ -3,6 +3,7 @@
 #include "PlayState.h"
 #include "LGUI.h"
 #include "LButton.h"
+#include "LLabel.h"
 
 class MenuState :
 	public GameState

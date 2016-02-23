@@ -151,6 +151,7 @@
     <ClInclude Include="Crew.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="LLabel.h" />
     <ClInclude Include="NameGenerator.h" />
     <ClInclude Include="Injury.h" />
     <ClInclude Include="LButton.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="LButton.cpp" />
     <ClCompile Include="LGUI.cpp" />
+    <ClCompile Include="LLabel.cpp" />
     <ClCompile Include="LWidget.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="NameGenerator.cpp" />

@@ -2,15 +2,20 @@
 #include "LButton.h"
 
 
-LButton::LButton(std::string up, std::string down, float x, float y) // down = hover
+LButton::LButton(std::string t, float x, float y, float w, int c, std::string f) :
+	x(x),
+	y(y),
+	w(w),
+	c1(c),
+	c2(c * 2)
 {
-	up_tex.loadFromFile(up);
-	down_tex.loadFromFile(down);
+	callback = [&]() {}; // default callback. does nothing.
 
-	sprite.setTexture(up_tex);
-	sprite.setPosition(x, y);
+	font.loadFromFile(f);
+	text.setFont(font);
+	text.setString(t);
+	text.setCharacterSize(c);
 
-	callback = [&]() {};
 
 }
 
@@ -20,11 +25,11 @@ LButton::~LButton()
 
 bool LButton::inBounds(sf::Vector2i m)
 {
-	float s_l = sprite.getPosition().x;
-	float s_r = sprite.getPosition().x + sprite.getLocalBounds().width;
-	float s_t = sprite.getPosition().y;
-	float s_b = sprite.getPosition().y + sprite.getLocalBounds().height;
-
+	// REDO THIS SHIT
+	float s_l = text.getPosition().x;
+	float s_r = text.getPosition().x + text.getGlobalBounds().width;
+	float s_t = text.getPosition().y;
+	float s_b = text.getPosition().y + text.getCharacterSize() + 10;
 	return (m.x > s_l && m.x < s_r && m.y > s_t && m.y < s_b);
 }
 
@@ -41,16 +46,32 @@ void LButton::handleEvents(thor::ActionMap<std::string>& emap)
 
 void LButton::update()
 {
-	printf("%d : %d\r", mpos.x, mpos.y);
+	float tw = text.getGlobalBounds().width;
+	text.setPosition(floor(x + ((w / 2) - (tw / 2))) + 2, y - ceil(text.getCharacterSize() / 1.3));
 
 	if (inBounds(mpos))
-		sprite.setTexture(down_tex);
+		text.setCharacterSize(c2);
 	else
-		sprite.setTexture(up_tex);
+		text.setCharacterSize(c1);
 }
 
 void LButton::render(sf::RenderWindow* context)
 {
 	mpos = sf::Mouse::getPosition(*context);
-	context->draw(sprite);
+
+	float tw = text.getGlobalBounds().width;
+	float z = (x + ((w / 2) - (tw / 2)));
+
+	sf::Vertex left[2] = {
+		sf::Vertex(sf::Vector2f(x, y), sf::Color(0, 255, 255)),
+		sf::Vertex(sf::Vector2f(z, y), sf::Color(0, 255, 255))
+	};
+	sf::Vertex right[2] = {
+		sf::Vertex(sf::Vector2f(z + tw + 4, y), sf::Color(0, 255, 255)),
+		sf::Vertex(sf::Vector2f(x + w, y), sf::Color(0, 255, 255))
+	};
+
+	context->draw(left, 2, sf::Lines);
+	context->draw(right, 2, sf::Lines);
+	context->draw(text);
 }

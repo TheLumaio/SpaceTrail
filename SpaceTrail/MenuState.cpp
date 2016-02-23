@@ -17,9 +17,9 @@ MenuState::~MenuState()
 
 void MenuState::init(EventMap& emap)
 {
-	start = new LButton("data/images/start_up.png", "data/images/start_down.png", 1280 / 2 - 128 / 2, 100);
-	options = new LButton("data/images/options_up.png", "data/images/options_down.png", 1280 / 2 - 128 / 2, 166);
-	quit = new LButton("data/images/quit_up.png", "data/images/quit_down.png", 1280 / 2 - 128 / 2, 166 + 66);
+	start = new LButton("Start", 1280/2-75, 100);
+	options = new LButton("Options", 1280/2-75, 150);
+	quit = new LButton("Quit", 1280/2-75, 200);
 
 	start->connect([&]() { m_engine->setState(new PlayState(m_engine)); });
 	quit->connect([&]() { m_engine->quit(); });
@@ -28,6 +28,7 @@ void MenuState::init(EventMap& emap)
 	gui->addWidget(start);
 	gui->addWidget(options);
 	gui->addWidget(quit);
+	gui->addWidget(new LLabel("Space Trail", 1280/2-300/2, 50, 16*2, 300));
 
 }
 
