@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Engine.h"
 
 Engine::Engine(int width, int height, std::string title) :

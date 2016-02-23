@@ -1,6 +1,8 @@
 #pragma once
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
+#include <Thor/Input.hpp>
 #include "Engine.h"
 
 typedef thor::ActionMap<std::string> EventMap;

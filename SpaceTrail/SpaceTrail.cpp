@@ -1,7 +1,6 @@
 // SpaceTrail.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "Engine.h"
 #include "MenuState.h"
 #include "NameGenerator.h"

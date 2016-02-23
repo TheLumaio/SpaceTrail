@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "PlayState.h"
 
 PlayState::PlayState(Engine* e) :

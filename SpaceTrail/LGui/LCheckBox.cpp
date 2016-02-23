@@ -16,3 +16,18 @@ bool LCheckBox::isChecked()
 {
 	return checked;
 }
+
+void LCheckBox::handleEvents(thor::ActionMap<std::string>& emap)
+{
+
+}
+
+void LCheckBox::update()
+{
+
+}
+
+void LCheckBox::render(sf::RenderWindow* context)
+{
+
+}
