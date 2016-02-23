@@ -8,9 +8,16 @@ private:
 	bool checked;
 	float x, y, w;
 
+	sf::Font font;
+	sf::Text text;
+
+	sf::Vector2i mpos;
+	
+	bool inBounds();
+
 public:
 	LCheckBox() = default;
-	LCheckBox(std::string, float, float, bool = false, float = 100);
+	LCheckBox(std::string, float, float, bool = false, float = 125);
 	~LCheckBox();
 
 	bool isChecked();

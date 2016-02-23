@@ -11,7 +11,4 @@ struct Injury
 	{ }
 };
 
-const Injury BrokenArm        = Injury(0, 10, 0, 0);
-const Injury BrokenLeg        = Injury(0, 20, 0, 0);
-const Injury InternalBleeding = Injury(5, 10, 0, 0);
-const Injury SpaceDysentery   = Injury(10, 20, 0, 0);
+// TODO: write some injuries.

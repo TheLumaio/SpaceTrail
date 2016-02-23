@@ -4,6 +4,7 @@
 #include "LGui/LGUI.h"
 #include "LGui/LButton.h"
 #include "LGui/LLabel.h"
+#include "LGui/LCheckBox.h"
 
 class MenuState :
 	public GameState
