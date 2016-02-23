@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "../stdafx.h"
 #include "LLabel.h"
 
 LLabel::LLabel(std::string text, float x, float y, ALIGN align, int c, float w, std::string f) :

@@ -14,5 +14,9 @@ public:
 	~LCheckBox();
 
 	bool isChecked();
+
+	void handleEvents(thor::ActionMap<std::string>&);
+	void update();
+	void render(sf::RenderWindow*);
 };
 

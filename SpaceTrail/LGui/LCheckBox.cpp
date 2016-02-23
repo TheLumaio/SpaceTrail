@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "LCheckBox.h"
 
 LCheckBox::LCheckBox(std::string text, float x, float y, bool checked, float w) :

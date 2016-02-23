@@ -1,4 +1,8 @@
 #pragma once
+
+#include <SFML/Graphics.hpp>
+#include <Thor/Input.hpp>
+
 class LWidget
 {
 public:
