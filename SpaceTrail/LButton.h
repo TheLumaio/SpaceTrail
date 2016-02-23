@@ -16,7 +16,7 @@ private:
 	sf::Text text;
 
 	float x, y, w;
-	int c1, c2;
+	int c1, c2, c3;
 
 public:
 	LButton() = default;

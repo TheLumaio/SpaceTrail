@@ -43,5 +43,6 @@ void MenuState::update(float dt, sf::Event& event)
 
 void MenuState::render(sf::RenderWindow* context)
 {
+	context->clear(sf::Color(25, 25, 25));
 	gui->render(context);
 }

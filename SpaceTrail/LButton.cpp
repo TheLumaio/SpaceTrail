@@ -7,7 +7,8 @@ LButton::LButton(std::string t, float x, float y, float w, int c, std::string f)
 	y(y),
 	w(w),
 	c1(c),
-	c2(c * 2)
+	c2(c * 2),
+	c3(c + c/2)
 {
 	callback = [&]() {}; // default callback. does nothing.
 
@@ -25,7 +26,6 @@ LButton::~LButton()
 
 bool LButton::inBounds(sf::Vector2i m)
 {
-	// REDO THIS SHIT
 	float s_l = text.getPosition().x;
 	float s_r = text.getPosition().x + text.getGlobalBounds().width;
 	float s_t = text.getPosition().y;
@@ -41,18 +41,27 @@ void LButton::connect(std::function<void()> callback)
 void LButton::handleEvents(thor::ActionMap<std::string>& emap)
 {
 	if (emap.isActive("click_left")) if (inBounds(mpos)) callback();
+	
+	if (inBounds(mpos))
+	{
+		if (emap.isActive("hold_left") && inBounds(mpos))
+			text.setCharacterSize(c3);
+		else
+			text.setCharacterSize(c2);
+	}
+	else
+		text.setCharacterSize(c1);
+
+	float tw = text.getGlobalBounds().width;
+	text.setPosition(floor(x + ((w / 2) - (tw / 2))) + 2, y - ceil(text.getCharacterSize() / 1.3));
 	// how about them nests tho
 }
 
 void LButton::update()
 {
+
 	float tw = text.getGlobalBounds().width;
 	text.setPosition(floor(x + ((w / 2) - (tw / 2))) + 2, y - ceil(text.getCharacterSize() / 1.3));
-
-	if (inBounds(mpos))
-		text.setCharacterSize(c2);
-	else
-		text.setCharacterSize(c1);
 }
 
 void LButton::render(sf::RenderWindow* context)

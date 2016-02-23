@@ -8,13 +8,6 @@ class PlayState :
 private:
 	/// background
 	sf::RectangleShape background;
-	
-	/// out
-	std::vector<std::string> output;
-
-	/// temp text
-	sf::Font font;
-	sf::Text text;
 
 public:
 	PlayState()=default;
