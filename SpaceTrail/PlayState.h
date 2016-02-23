@@ -1,6 +1,6 @@
 #pragma once
 #include "GameState.h"
-#include "LButton.h"
+#include "LGui/LButton.h"
 
 class PlayState :
 	public GameState

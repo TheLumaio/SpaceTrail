@@ -1,9 +1,9 @@
 #pragma once
 #include "GameState.h"
 #include "PlayState.h"
-#include "LGUI.h"
-#include "LButton.h"
-#include "LLabel.h"
+#include "LGui/LGUI.h"
+#include "LGui/LButton.h"
+#include "LGui/LLabel.h"
 
 class MenuState :
 	public GameState

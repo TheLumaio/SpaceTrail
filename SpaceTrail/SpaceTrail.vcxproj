@@ -151,12 +151,13 @@
     <ClInclude Include="Crew.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="GameState.h" />
-    <ClInclude Include="LLabel.h" />
+    <ClInclude Include="LGui\LCheckBox.h" />
+    <ClInclude Include="LGui\LLabel.h" />
     <ClInclude Include="NameGenerator.h" />
     <ClInclude Include="Injury.h" />
-    <ClInclude Include="LButton.h" />
-    <ClInclude Include="LGUI.h" />
-    <ClInclude Include="LWidget.h" />
+    <ClInclude Include="LGui\LButton.h" />
+    <ClInclude Include="LGui\LGUI.h" />
+    <ClInclude Include="LGui\LWidget.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="PlayState.h" />
     <ClInclude Include="Ship.h" />
@@ -166,10 +167,11 @@
   <ItemGroup>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameState.cpp" />
-    <ClCompile Include="LButton.cpp" />
-    <ClCompile Include="LGUI.cpp" />
-    <ClCompile Include="LLabel.cpp" />
-    <ClCompile Include="LWidget.cpp" />
+    <ClCompile Include="LGui\LButton.cpp" />
+    <ClCompile Include="LGui\LCheckBox.cpp" />
+    <ClCompile Include="LGui\LGUI.cpp" />
+    <ClCompile Include="LGui\LLabel.cpp" />
+    <ClCompile Include="LGui\LWidget.cpp" />
     <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="NameGenerator.cpp" />
     <ClCompile Include="PlayState.cpp" />
