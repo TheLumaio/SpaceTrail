@@ -60,7 +60,7 @@ void LLabel::drawCenter(sf::RenderWindow* context)
 
 	sf::Vertex left[2] = {
 		sf::Vertex(sf::Vector2f(x, y), sf::Color::Green),
-		sf::Vertex(sf::Vector2f(z, y), sf::Color::Green)
+		sf::Vertex(sf::Vector2f(z - 5, y), sf::Color::Green)
 	};
 	sf::Vertex right[2] = {
 		sf::Vertex(sf::Vector2f(z + tw + 5, y), sf::Color::Green),

@@ -75,7 +75,7 @@ void LButton::render(sf::RenderWindow* context)
 		sf::Vertex(sf::Vector2f(z, y), sf::Color(0, 255, 255))
 	};
 	sf::Vertex right[2] = {
-		sf::Vertex(sf::Vector2f(z + tw + 4, y), sf::Color(0, 255, 255)),
+		sf::Vertex(sf::Vector2f(z + tw + 6, y), sf::Color(0, 255, 255)),
 		sf::Vertex(sf::Vector2f(x + w, y), sf::Color(0, 255, 255))
 	};
 

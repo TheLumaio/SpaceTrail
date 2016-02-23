@@ -28,10 +28,19 @@ void MenuState::init(EventMap& emap)
 	gui->addWidget(options);
 	gui->addWidget(quit);
 	gui->addWidget(new LLabel("Space Trail", 1280/2-300/2, 50, A_CENTER, 16*2, 300));
+
+	// demo
+
 	gui->addWidget(new LCheckBox("Test box", 100, 100, false, 140));
 	gui->addWidget(new LCheckBox("Another box", 100, 125, false, 140));
 	gui->addWidget(new LCheckBox("One more", 100, 150, false, 140));
 	gui->addWidget(new LCheckBox("Aaaand another", 100, 175, false, 140));
+
+	gui->addWidget(new LLabel("Demo Label : LEFT", 100, 250, A_LEFT));
+	gui->addWidget(new LLabel("Demo Label : CENTER", 100, 275, A_CENTER));
+	gui->addWidget(new LLabel("Demo Label : RIGHT", 100, 300, A_RIGHT));
+
+	gui->addWidget(new LButton("Demo Button", 100, 375, 200));
 
 }
 
