@@ -28,7 +28,7 @@ void MenuState::init(EventMap& emap)
 	gui->addWidget(start);
 	gui->addWidget(options);
 	gui->addWidget(quit);
-	gui->addWidget(new LLabel("Space Trail", 1280/2-300/2, 50, 16*2, 300));
+	gui->addWidget(new LLabel("Space Trail", 1280/2-300/2, 50, A_CENTER, 16*2, 300));
 
 }
 
